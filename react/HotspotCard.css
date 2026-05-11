@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  padding-bottom: 133.33%;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hotspotBtn {
+  /* base — positioned via inline style */
+}
+
+.panelLeft {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  background: rgba(255, 255, 255, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  overflow: hidden;
+}
+
+.productName {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sizesLabel {
+  font-size: 0.6rem;
+  color: #888;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sizesRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.sizeBtn {
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 0.62rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.sizeBtn:hover {
+  border-color: #555;
+}
+
+.sizeBtnActive {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.addToCartBox {
+  width: 4.5rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.97);
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: opacity 0.15s;
+  padding: 0.5rem;
+}
+
+.addToCartBox:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.addToCartBox:hover:not(:disabled) {
+  opacity: 0.7;
+}
+
+.buyBtn {
+  display: block;
+  align-self: center;
+  width: var(--hotspot-buy-width, fit-content);
+  margin: var(--hotspot-buy-margin, 0.5rem auto 0);
+  padding: var(--hotspot-buy-padding, 0.55rem 1.5rem);
+  background: var(--hotspot-buy-bg, #4C2B08);
+  color: var(--hotspot-buy-color, #fff);
+  font-size: var(--hotspot-buy-font-size, 0.75rem);
+  font-weight: 700;
+  letter-spacing: var(--hotspot-buy-letter-spacing, 0.12em);
+  border-radius: var(--hotspot-buy-border-radius, 0px);
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.buyBtn:hover {
+  opacity: 0.85;
+  color: var(--hotspot-buy-color, #fff);
+  text-decoration: none;
+}

@@ -1,0 +1,134 @@
+{
+  "slider-hero-styles": {
+    "component": "SliderHeroStyles"
+  },
+  "hotspot-card-config": {
+    "component": "HotspotCardConfig",
+    "schema": {
+      "title": "Hotspot Card — Config botón COMPRAR",
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "title": "Color de fondo",
+          "description": "Ej: #4C2B08",
+          "type": "string",
+          "default": "#4C2B08"
+        },
+        "textColor": {
+          "title": "Color del texto",
+          "description": "Ej: #ffffff",
+          "type": "string",
+          "default": "#ffffff"
+        },
+        "fontSize": {
+          "title": "Tamaño del texto",
+          "description": "Ej: 0.75rem, 14px",
+          "type": "string",
+          "default": "0.75rem"
+        },
+        "padding": {
+          "title": "Padding (relleno interior)",
+          "description": "Ej: 0.55rem 1.5rem",
+          "type": "string",
+          "default": "0.55rem 1.5rem"
+        },
+        "margin": {
+          "title": "Margen exterior vertical",
+          "description": "Solo arriba/abajo — el centrado horizontal es automático. Ej: 0.5rem auto 0",
+          "type": "string",
+          "default": "0.5rem auto 0"
+        },
+        "width": {
+          "title": "Ancho del botón",
+          "description": "fit-content, 100%, 80%, 200px, etc.",
+          "type": "string",
+          "default": "fit-content"
+        },
+        "borderRadius": {
+          "title": "Border radius (bordes redondeados)",
+          "description": "Ej: 0px, 4px, 50px",
+          "type": "string",
+          "default": "0px"
+        },
+        "letterSpacing": {
+          "title": "Espaciado entre letras",
+          "description": "Ej: 0.12em",
+          "type": "string",
+          "default": "0.12em"
+        }
+      }
+    }
+  },
+  "hotspot-card": {
+    "component": "HotspotCard",
+    "schema": {
+      "title": "Hotspot Card",
+      "type": "object",
+      "properties": {
+        "imageUrl": {
+          "title": "Imagen del producto",
+          "type": "string",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "altText": {
+          "title": "Texto alternativo de la imagen",
+          "type": "string"
+        },
+        "productUrl": {
+          "title": "URL del producto (botón COMPRAR)",
+          "type": "string"
+        },
+        "hotspots": {
+          "title": "Botones Hotspot",
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "title": "Hotspot",
+            "type": "object",
+            "properties": {
+              "top": {
+                "title": "Posición vertical",
+                "description": "Porcentaje desde arriba. Ej: 35%",
+                "type": "string",
+                "default": "50%"
+              },
+              "left": {
+                "title": "Posición horizontal",
+                "description": "Porcentaje desde la izquierda. Ej: 50%",
+                "type": "string",
+                "default": "50%"
+              },
+              "size": {
+                "title": "Tamaño del botón",
+                "description": "Ej: 2rem",
+                "type": "string",
+                "default": "2rem"
+              },
+              "color": {
+                "title": "Color del botón (inactivo)",
+                "description": "Ej: rgba(255,255,255,0.88) o #ffffff",
+                "type": "string"
+              },
+              "productName": {
+                "title": "Nombre del producto",
+                "type": "string"
+              },
+              "skuId": {
+                "title": "SKU ID",
+                "description": "ID del SKU en VTEX para agregar al carrito",
+                "type": "string"
+              },
+              "sizesText": {
+                "title": "Tallas disponibles",
+                "description": "Separadas por coma. Ej: XS, S, M, L, XL",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
